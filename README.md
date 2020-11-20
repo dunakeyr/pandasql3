@@ -1,6 +1,9 @@
 pandasql3
 ========
 
+`note` all credit goes to yhat -> https://github.com/yhat/pandasql
+This fork is only for the purposes of getting a wheel version of his 0.7.3 release.
+
 `pandasql3` allows you to query `pandas` DataFrames using SQL syntax. It works 
 similarly to `sqldf` in R. `pandasql3` seeks to provide a more familiar way of 
 manipulating and cleaning data for people new to Python or `pandas`.
