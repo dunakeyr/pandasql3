@@ -1,35 +1,35 @@
-pandasql
+pandasql3
 ========
 
-`pandasql` allows you to query `pandas` DataFrames using SQL syntax. It works 
-similarly to `sqldf` in R. `pandasql` seeks to provide a more familiar way of 
+`pandasql3` allows you to query `pandas` DataFrames using SQL syntax. It works 
+similarly to `sqldf` in R. `pandasql3` seeks to provide a more familiar way of 
 manipulating and cleaning data for people new to Python or `pandas`.
 
 #### Installation
 ```
-$ pip install -U pandasql
+$ pip install -U pandasql3
 ```
 
 #### Basics
-The main function used in pandasql is `sqldf`. `sqldf` accepts 2 parametrs
+The main function used in pandasql3 is `sqldf`. `sqldf` accepts 2 parametrs
    - a sql query string
    - a set of session/environment variables (`locals()` or `globals()`)
 
 Specifying `locals()` or `globals()` can get tedious. You can define a short 
 helper function to fix this.
 
-    from pandasql import sqldf
+    from pandasql3 import sqldf
     pysqldf = lambda q: sqldf(q, globals())
 
 #### Querying
-`pandasql` uses [SQLite syntax](http://www.sqlite.org/lang.html). Any `pandas` 
-dataframes will be automatically detected by `pandasql`. You can query them as 
+`pandasql3` uses [SQLite syntax](http://www.sqlite.org/lang.html). Any `pandas` 
+dataframes will be automatically detected by `pandasql3`. You can query them as 
 you would any regular SQL table.
 
 
 ```
 $ python
->>> from pandasql import sqldf, load_meat, load_births
+>>> from pandasql3 import sqldf, load_meat, load_births
 >>> pysqldf = lambda q: sqldf(q, globals())
 >>> meat = load_meat()
 >>> births = load_births()
@@ -75,10 +75,3 @@ joins and aggregations are also supported
 3  1947       10096
 4  1948        8766
 ```
-
-More information and code samples available in the [examples](https://github.com/yhat/pandasql/blob/master/examples/demo.py)
- folder or on [our blog](http://blog.yhathq.com/posts/pandasql-sql-for-pandas-dataframes.html).
-
-
-
-[![Analytics](https://ga-beacon.appspot.com/UA-46996803-1/pandasql/README.md)](https://github.com/yhat/pandasql)    
